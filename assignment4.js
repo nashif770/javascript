@@ -20,7 +20,6 @@ function mindGame(num){
 };
 
 // Problem 2: Finding even or odd
-
 // this function checks if the amount of characters in a string is even or odd
 
 function evenOdd(name){
@@ -38,8 +37,8 @@ function evenOdd(name){
     }
 };
 
-// problem 3 ------------------------
 // Problem 3: Is Less or Greater than seven
+// this function checks the relation between input and the number 7;
 
 function isLGSeven(num){
     let numtype = typeof num;
@@ -56,8 +55,8 @@ function isLGSeven(num){
      }
 };
 
-// problem 4 ------------------------
 // Problem 4: Finding Bad data
+// this function finds and negatice number and counts those as bad data.
 
 function findingBadData(datas){
     let badData = [];
@@ -75,14 +74,12 @@ function findingBadData(datas){
     };
 
     let countBad = badData.length;
-    // console.log("Bad " + badData);
-    // console.log("Good " + goodData);
     return countBad;
 };
 
 
-// problem 5------------------------
 // Problem 5: Convert your gems into diamond
+// this function calculates the amount of diamon can be returned.
 
 function gemsToDiamond(friend1, friend2, friend3){
     let friend1type = typeof friend1;
@@ -106,7 +103,6 @@ function gemsToDiamond(friend1, friend2, friend3){
     };
     
 };
-
 
 // end of assignment
 
