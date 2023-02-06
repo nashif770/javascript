@@ -1,12 +1,17 @@
-// Problem 1 ------------------------
 // Problem 1: Let’s play a mind game
 
+// this function guesses a number user is inputting
+
 function mindGame(num){
+    let numtype = typeof num;
     let a = num*3;
     let b = a+10;
     let c = b/2;
     let d = c-5;
-    if(num<0){
+    if(numtype !=="number"){
+        return "Please provide a valid Number";
+    }
+    else if(num<0){
         return "Please provide a Positive Number";
     }
     else{
@@ -14,13 +19,18 @@ function mindGame(num){
     };
 };
 
-// problem 2 ------------------------
 // Problem 2: Finding even or odd
 
+// this function checks if the amount of characters in a string is even or odd
+
 function evenOdd(name){
+    let checktype = typeof name;
     let nameLength = name.length;
     let hasReminder = nameLength % 2;
-    if(hasReminder == 0){
+    if(checktype !== "string" ){
+        return "please provide a valid text"
+    }
+    else if(hasReminder == 0){
         return "Even";
     }
     else{
@@ -32,9 +42,13 @@ function evenOdd(name){
 // Problem 3: Is Less or Greater than seven
 
 function isLGSeven(num){
-    let realnum = num - 7;
-    if(num < 7){
-        return realnum;
+    let numtype = typeof num;
+    let subtraction = num - 7;
+    if(numtype !=="number"){
+        return "Please provide a valid Number";
+    }
+    else if(num < 7){
+        return subtraction;
     }
     else{
         let double = num*2;
@@ -50,7 +64,11 @@ function findingBadData(datas){
     for(let i=0; i<datas.length; i++){
         let index = i;
         let element = datas[index];
-        if(element>0){
+        let elementtype = typeof element;
+        if(elementtype !=="number"){
+            return "Please provide a valid Array";
+        }
+        else if(element>0){
             badData.push(element);
 
         }
@@ -67,13 +85,19 @@ function findingBadData(datas){
 // Problem 5: Convert your gems into diamond
 
 function gemsToDiamond(friend1, friend2, friend3){
+    let friend1type = typeof friend1;
+    let friend2type = typeof friend2;
+    let friend3type = typeof friend3;
+
     let diamond1st = friend1*21;
     let diamond2nd = friend2*32;
     let diamond3rd = friend3*43;
 
     let total = diamond1st+diamond2nd+diamond3rd;
-
-    if(total>1000*2){
+    if (friend1type !== "number" || friend2type !=="number" || friend3type !== "number"){
+        return "please provide valid data";
+    }
+    else if(total>1000*2){
         let weGet = total-2000;
         return weGet;
     }
@@ -87,18 +111,18 @@ function gemsToDiamond(friend1, friend2, friend3){
 // end of assignment
 
 // p1 test 
-let a = mindGame(33);
-console.log("p1 mindgame prob " + a);
+let a = mindGame();
+console.log(a);
 // p2 test 
-let b = evenOdd("chatgpt");
-console.log("p2 Name is done " + b);
+let b = evenOdd("chub");
+console.log(b);
 // p3 test 
-let c = isLGSeven(15);
-console.log("p3 Difference is prob " + c);
+let c = isLGSeven();
+console.log(c);
 // p4 test 
-let arr = [12, -76, -23, 23, -12, 32, -54, -23, 20]
+let arr = [12, -76, "a", 23, -12, 32, -54, -23, 20]
 let d = findingBadData(arr);
-console.log("p4 Bad Data done " + d);
+console.log(d);
 // p5 test 
-let e = gemsToDiamond(100,5,1);
-console.log("p5 Diamond done " + e);
+let e = gemsToDiamond();
+console.log(e);
