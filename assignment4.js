@@ -24,12 +24,12 @@ function mindGame(num){
 
 function evenOdd(name){
     let checktype = typeof name;
-    let nameLength = name.length;
-    let hasReminder = nameLength % 2;
     if(checktype !== "string" ){
         return "please provide a valid text"
     }
-    else if(hasReminder == 0){
+    let nameLength = name.length;
+    let hasReminder = nameLength % 2;
+    if(hasReminder == 0){
         return "Even";
     }
     else{
@@ -110,7 +110,7 @@ function gemsToDiamond(friend1, friend2, friend3){
 let a = mindGame();
 console.log(a);
 // p2 test 
-let b = evenOdd("chub");
+let b = evenOdd();
 console.log(b);
 // p3 test 
 let c = isLGSeven();
