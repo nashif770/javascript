@@ -6,7 +6,12 @@ function mindGame(num){
     let b = a+10;
     let c = b/2;
     let d = c-5;
-    return d;
+    if(num<0){
+        return "Please provide a Positive Number";
+    }
+    else{
+        return d;
+    };
 };
 
 // problem 2 ------------------------
@@ -27,12 +32,12 @@ function evenOdd(name){
 // Problem 3: Is Less or Greater than seven
 
 function isLGSeven(num){
-    let difference = Math.abs(7 - num);
-    if(difference < 7){
-        return difference;
+    let realnum = num - 7;
+    if(num < 7){
+        return realnum;
     }
     else{
-        let double = difference*2;
+        let double = num*2;
         return double;
      }
 };
@@ -82,18 +87,18 @@ function gemsToDiamond(friend1, friend2, friend3){
 // end of assignment
 
 // p1 test 
-let a = mindGame(50);
-console.log("mindgame prob " + a);
+let a = mindGame(33);
+console.log("p1 mindgame prob " + a);
 // p2 test 
 let b = evenOdd("chatgpt");
-console.log("Name is done " + b);
+console.log("p2 Name is done " + b);
 // p3 test 
-let c = isLGSeven(6);
-console.log("Difference is prob " + c);
+let c = isLGSeven(15);
+console.log("p3 Difference is prob " + c);
 // p4 test 
 let arr = [12, -76, -23, 23, -12, 32, -54, -23, 20]
 let d = findingBadData(arr);
-console.log("Bad Data done " + d);
+console.log("p4 Bad Data done " + d);
 // p5 test 
 let e = gemsToDiamond(100,5,1);
-console.log("Diamond done " + e);
+console.log("p5 Diamond done " + e);
