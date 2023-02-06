@@ -1,5 +1,4 @@
 // Problem 1: Let’s play a mind game
-
 // this function guesses a number user is inputting
 
 function mindGame(num){
@@ -67,7 +66,7 @@ function findingBadData(datas){
         if(elementtype !=="number"){
             return "Please provide a valid Array";
         }
-        else if(element>0){
+        else if(element<0){
             badData.push(element);
 
         }
@@ -105,20 +104,3 @@ function gemsToDiamond(friend1, friend2, friend3){
 };
 
 // end of assignment
-
-// p1 test 
-let a = mindGame();
-console.log(a);
-// p2 test 
-let b = evenOdd();
-console.log(b);
-// p3 test 
-let c = isLGSeven();
-console.log(c);
-// p4 test 
-let arr = [12, -76, "a", 23, -12, 32, -54, -23, 20]
-let d = findingBadData(arr);
-console.log(d);
-// p5 test 
-let e = gemsToDiamond();
-console.log(e);
